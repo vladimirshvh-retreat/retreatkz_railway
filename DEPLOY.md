@@ -1,34 +1,40 @@
-# Deployment Instructions
+# Deployment Instructions (Render)
 
 ## 1. GitHub
-1.  Create a new repository on GitHub.
-2.  Push this code to the repository:
-    ```bash
-    git remote add origin <your-repo-url>
-    git branch -M main
-    git push -u origin main
-    ```
+Ensure your code is pushed to GitHub (already done).
+Repository: `https://github.com/vladimirshvh-retreat/retreatkz_railway.git`
 
-## 2. Railway
-1.  Log in to [Railway](https://railway.app/).
-2.  Click "New Project" -> "Deploy from GitHub repo".
-3.  Select your repository.
-4.  **Add a Database**:
-    - Right-click on the canvas or click "New".
-    - Select "Database" -> "PostgreSQL".
-5.  **Connect Database**:
-    - Click on your Next.js service.
-    - Go to "Variables".
+## 2. Render Setup
+1.  Log in to [Render](https://render.com/).
+2.  Click **New +** -> **PostgreSQL**.
+    - **Name**: `retreat-db`
+    - **Database**: `retreat_db`
+    - **User**: `retreat_user`
+    - **Region**: Frankfurt (or closest to you)
+    - **Plan**: Free
+    - Click **Create Database**.
+    - **IMPORTANT**: Copy the **Internal Database URL** (starts with `postgres://...`).
+
+3.  Click **New +** -> **Web Service**.
+    - **Build from GitHub**.
+    - Select your repository `retreatkz_railway`.
+    - **Name**: `retreat-web`
+    - **Region**: Same as database.
+    - **Branch**: `main`
+    - **Runtime**: Node
+    - **Build Command**: `npm install && npx prisma generate && npm run build`
+    - **Start Command**: `npx prisma db push && npm start`
+    - **Plan**: Free
+
+4.  **Environment Variables** (Advanced / Environment):
     - Add `DATABASE_URL`.
-    - Value: `${{Postgres.DATABASE_URL}}` (Railway should autocomplete this).
-6.  **Build & Deploy**:
-    - Railway will automatically build and deploy.
-    - The `postinstall` script (`prisma generate`) will run automatically.
-    - The migration (`prisma db push`) might need to be run manually in the Railway CLI or added to the start command, but for now, `prisma db push` is the easiest way to sync schema.
-    - **Recommended**: Add a "Start Command" in Settings -> "Deploy":
-      `npx prisma db push && next start`
+    - Value: Paste the **Internal Database URL** you copied earlier.
+    - Add `NODE_VERSION`.
+    - Value: `20` (or `18`)
+
+5.  Click **Create Web Service**.
 
 ## 3. Verify
-- Open your deployed URL.
-- Try submitting the booking form.
-- Check the database in Railway to see the new record.
+- Wait for the build to finish.
+- Render will provide a URL (e.g., `retreat-web.onrender.com`).
+- Open the URL and test the booking form.
