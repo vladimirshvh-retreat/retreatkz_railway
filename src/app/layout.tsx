@@ -20,8 +20,8 @@ const tenor = Tenor_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Oryn Retreat | Bali Surf & Yoga",
-  description: "Experience the perfect blend of surf, yoga, and relaxation at Oryn Retreat in Bali.",
+  title: "Oryn Retreat",
+  description: "Этот ретрит — больше, чем программа. Это встреча с собой настоящим.",
   icons: {
     icon: "/images/logo.png",
   },
