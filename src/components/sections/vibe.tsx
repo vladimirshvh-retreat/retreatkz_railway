@@ -9,7 +9,7 @@ const icons = [Sun, Brain, Flame, Smile, Heart, Mountain];
 
 export function Vibe() {
     return (
-        <section id="vibe" className="pt-20 pb-0 bg-slate-50">
+        <section id="vibe" className="py-20 bg-slate-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <FadeIn direction="up">
@@ -22,7 +22,7 @@ export function Vibe() {
                     </FadeIn>
                 </div>
 
-                <div className="relative pb-20">
+                <div className="relative">
                     {/* Vertical Line */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-slate-200 hidden md:block" />
 
@@ -36,23 +36,20 @@ export function Vibe() {
                                     className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
                                         }`}
                                 >
-                                    <div className="flex-1 text-center md:text-left relative group">
-                                        {/* Connecting Line */}
-                                        <div className={`hidden md:block absolute top-1/2 w-8 h-0.5 bg-slate-200 transition-colors group-hover:bg-[#87CEEB] ${index % 2 === 0 ? "-right-8" : "-left-8"}`} />
-
-                                        <Link href={`/program/${item.slug}`} className="block cursor-pointer">
+                                    <div className="flex-1 text-center md:text-left">
+                                        <Link href={`/program/${item.slug}`} className="block group cursor-pointer">
                                             <div className={`md:max-w-md ${index % 2 === 0 ? "md:ml-auto md:text-right" : ""}`}>
-                                                <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-[#87CEEB] transition-colors">{item.title}</h3>
-                                                <p className="text-[#87CEEB] font-semibold mb-2">{item.subtitle}</p>
+                                                <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
+                                                <p className="text-primary font-semibold mb-2">{item.subtitle}</p>
                                                 <p className="text-slate-600">{item.description}</p>
-                                                <span className="text-sm text-[#87CEEB] mt-2 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
+                                                <span className="text-sm text-primary mt-2 inline-block opacity-0 group-hover:opacity-100 transition-opacity">
                                                     Подробнее →
                                                 </span>
                                             </div>
                                         </Link>
                                     </div>
 
-                                    <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg border-4 border-[#87CEEB] text-[#87CEEB]">
+                                    <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-lg border-4 border-primary text-primary">
                                         {Icon && <Icon className="w-8 h-8" />}
                                     </div>
 
