@@ -59,7 +59,7 @@ export function Navbar() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors flex items-center"
+                            className="text-sm font-medium text-slate-600 hover:text-[#87CEEB] transition-colors flex items-center"
                         >
                             {item.name === "Home" ? <Home className="w-5 h-5" /> : item.name}
                         </Link>
@@ -83,7 +83,7 @@ export function Navbar() {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2"
+                                    className="text-lg font-medium text-slate-900 hover:text-[#87CEEB] transition-colors flex items-center gap-2"
                                 >
                                     {item.name === "Home" && <Home className="w-5 h-5" />}
                                     {item.name !== "Home" && item.name}
