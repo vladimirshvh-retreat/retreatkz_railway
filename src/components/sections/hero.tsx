@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, MessageCircle } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
+import { siteConfig } from "@/lib/config";
 
 const heroImages = [
     "/images/hero/rice-terraces.png",
@@ -129,14 +130,19 @@ export function Hero() {
                             </DialogContent>
                         </Dialog>
 
+
                         <div className="flex flex-row gap-4">
-                            <Button variant="outline" size="lg" className="bg-green-500/20 hover:bg-green-500/30 text-white border-green-400/50 backdrop-blur-sm gap-2">
-                                <MessageCircle className="w-5 h-5" />
-                                WhatsApp
+                            <Button variant="outline" size="lg" className="bg-green-500/20 hover:bg-green-500/30 text-white border-green-400/50 backdrop-blur-sm gap-2" asChild>
+                                <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer">
+                                    <MessageCircle className="w-5 h-5" />
+                                    WhatsApp
+                                </a>
                             </Button>
-                            <Button variant="outline" size="lg" className="bg-blue-500/20 hover:bg-blue-500/30 text-white border-blue-400/50 backdrop-blur-sm gap-2">
-                                <Send className="w-5 h-5" />
-                                Telegram
+                            <Button variant="outline" size="lg" className="bg-blue-500/20 hover:bg-blue-500/30 text-white border-blue-400/50 backdrop-blur-sm gap-2" asChild>
+                                <a href={siteConfig.contacts.telegram.link} target="_blank" rel="noopener noreferrer">
+                                    <Send className="w-5 h-5" />
+                                    Telegram
+                                </a>
                             </Button>
                         </div>
                     </div>
