@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft, MessageCircle, Send } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
+import { siteConfig } from "@/lib/config";
 
 export async function generateStaticParams() {
     return packagesData.map((pkg) => ({
@@ -111,12 +112,12 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                             <h3 className="text-xl font-tenor mb-6 text-slate-900">Обратная связь</h3>
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
                                 <Button variant="outline" size="lg" className="gap-2 hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-colors" asChild>
-                                    <a href="https://wa.me/79999999999" target="_blank" rel="noopener noreferrer">
+                                    <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer">
                                         <MessageCircle className="w-5 h-5" /> WhatsApp
                                     </a>
                                 </Button>
                                 <Button variant="outline" size="lg" className="gap-2 hover:bg-sky-50 hover:text-sky-600 hover:border-sky-200 transition-colors" asChild>
-                                    <a href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+                                    <a href={siteConfig.contacts.telegram.link} target="_blank" rel="noopener noreferrer">
                                         <Send className="w-5 h-5" /> Telegram
                                     </a>
                                 </Button>

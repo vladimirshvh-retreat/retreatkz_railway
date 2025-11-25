@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MessageCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { siteConfig } from "@/lib/config";
 
 export function Footer() {
     return (
@@ -36,12 +37,12 @@ export function Footer() {
 
                             <div className="flex flex-col gap-3 items-start">
                                 <Button variant="outline" className="gap-2 bg-transparent border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white" asChild>
-                                    <a href="https://wa.me/79999999999" target="_blank" rel="noopener noreferrer">
+                                    <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer">
                                         <MessageCircle className="w-4 h-4" /> WhatsApp
                                     </a>
                                 </Button>
                                 <Button variant="outline" className="gap-2 bg-transparent border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white" asChild>
-                                    <a href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+                                    <a href={siteConfig.contacts.telegram.link} target="_blank" rel="noopener noreferrer">
                                         <Send className="w-4 h-4" /> Telegram
                                     </a>
                                 </Button>
