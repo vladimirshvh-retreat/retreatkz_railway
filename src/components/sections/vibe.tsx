@@ -9,7 +9,7 @@ const icons = [Sun, Brain, Flame, Smile, Heart, Mountain];
 
 export function Vibe() {
     return (
-        <section id="vibe" className="py-20 bg-slate-50">
+        <section id="vibe" className="pt-20 pb-0 bg-slate-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <FadeIn direction="up">
@@ -22,7 +22,7 @@ export function Vibe() {
                     </FadeIn>
                 </div>
 
-                <div className="relative">
+                <div className="relative pb-20">
                     {/* Vertical Line */}
                     <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-slate-200 hidden md:block" />
 
