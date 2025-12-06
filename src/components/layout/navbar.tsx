@@ -48,7 +48,7 @@ export function Navbar() {
                             WebkitMaskPosition: 'center'
                         }}
                     />
-                    <span className="text-3xl font-bold text-slate-900 font-tenor tracking-wide">
+                    <span className="text-3xl font-bold text-slate-900 font-serif tracking-wide">
                         Oryn Retreat
                     </span>
                 </Link>

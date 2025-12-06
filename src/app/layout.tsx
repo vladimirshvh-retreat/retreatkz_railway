@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Outfit, Kaushan_Script, Tenor_Sans } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const outfit = Outfit({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const kaushan = Kaushan_Script({
-  weight: "400",
-  variable: "--font-script",
-  subsets: ["latin"],
-});
-
-const tenor = Tenor_Sans({
-  weight: "400",
-  variable: "--font-tenor",
+const playfair = Playfair_Display({
+  variable: "--font-serif",
   subsets: ["latin"],
 });
 
@@ -35,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${kaushan.variable} ${tenor.variable} antialiased font-sans`}
+        className={`${inter.variable} ${playfair.variable} antialiased font-sans bg-retreat-bg`}
       >
         {children}
       </body>

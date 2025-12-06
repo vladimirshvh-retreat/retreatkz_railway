@@ -8,6 +8,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-serif);
+  --color-retreat-brown: var(--retreat-brown);
+  --color-retreat-brown-dark: var(--retreat-brown-dark);
+  --color-retreat-bg: var(--retreat-bg);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -46,6 +50,9 @@
 :root {
   --radius: 0.5rem;
   --background: 0 0% 100%;
+  --retreat-brown: #B09E89;
+  --retreat-brown-dark: #968472;
+  --retreat-bg: #F9F9F9;
   --foreground: 222.2 84% 4.9%;
   --card: 0 0% 100%;
   --card-foreground: 222.2 84% 4.9%;
