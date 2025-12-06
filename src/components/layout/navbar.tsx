@@ -29,14 +29,15 @@ export function Navbar() {
     return (
         <header
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-sm py-4"
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
+                isScrolled ? "bg-white shadow-sm" : "bg-transparent"
             )}
         >
             <div className="container mx-auto px-4 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-3">
-                    {/* Logo with Sky Blue Color using Mask */}
+                    {/* Logo - adapts to scroll state */}
                     <div
-                        className="h-10 w-10 bg-[#87CEEB]"
+                        className={cn("h-10 w-10 transition-colors duration-300", isScrolled ? "bg-[#87CEEB]" : "bg-white")}
                         style={{
                             maskImage: 'url("/images/logo.png")',
                             maskSize: 'contain',
@@ -48,7 +49,9 @@ export function Navbar() {
                             WebkitMaskPosition: 'center'
                         }}
                     />
-                    <span className="text-3xl font-bold text-slate-900 font-serif tracking-wide">
+                    <span className={cn("text-3xl font-bold font-serif tracking-wide transition-colors duration-300",
+                        isScrolled ? "text-slate-900" : "text-white"
+                    )}>
                         Oryn Retreat
                     </span>
                 </Link>
@@ -59,12 +62,20 @@ export function Navbar() {
                         <Link
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors flex items-center"
+                            className={cn(
+                                "text-sm font-medium transition-colors flex items-center hover:opacity-80",
+                                isScrolled ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
+                            )}
                         >
                             {item.name === "Home" ? <Home className="w-5 h-5" /> : item.name}
                         </Link>
                     ))}
-                    <Button className="bg-[#87CEEB] hover:bg-[#5FB6D9] text-white font-semibold rounded-md px-6">
+                    <Button className={cn(
+                        "font-semibold rounded-md px-6 transition-colors",
+                        isScrolled
+                            ? "bg-[#87CEEB] hover:bg-[#5FB6D9] text-white"
+                            : "bg-white text-slate-900 hover:bg-white/90"
+                    )}>
                         Забронировать
                     </Button>
                 </nav>
@@ -72,7 +83,7 @@ export function Navbar() {
                 {/* Mobile Nav */}
                 <Sheet>
                     <SheetTrigger asChild>
-                        <Button variant="ghost" size="icon" className="xl:hidden text-slate-900">
+                        <Button variant="ghost" size="icon" className={cn("xl:hidden", isScrolled ? "text-slate-900" : "text-white")}>
                             <Menu className="h-6 w-6" />
                             <span className="sr-only">Toggle menu</span>
                         </Button>

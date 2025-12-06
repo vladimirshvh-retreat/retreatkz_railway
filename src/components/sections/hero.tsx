@@ -9,6 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { FadeIn } from "@/components/ui/fade-in";
+import { MessageCircle, Send } from "lucide-react";
+import { siteConfig } from "@/lib/config";
 
 const heroImages = [
     "/images/hero/rice-terraces.png",
@@ -70,62 +72,28 @@ export function Hero() {
                 </FadeIn>
 
                 <FadeIn delay={0.6} direction="up">
-                    <Dialog>
-                        <DialogTrigger asChild>
-                            <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-6 text-lg font-medium shadow-md rounded-full transition-all hover:scale-105 border-none">
-                                Забронировать место
-                            </Button>
-                        </DialogTrigger>
-                        <DialogContent className="sm:max-w-[425px] bg-white text-slate-900">
-                            <DialogHeader>
-                                <DialogTitle className="text-2xl font-serif text-center">Заявка на ретрит</DialogTitle>
-                            </DialogHeader>
-                            <form onSubmit={async (e) => {
-                                e.preventDefault();
-                                const form = e.target as HTMLFormElement;
-                                const formData = new FormData(form);
-                                const data = Object.fromEntries(formData.entries());
-
-                                try {
-                                    const res = await fetch('/api/book', {
-                                        method: 'POST',
-                                        headers: { 'Content-Type': 'application/json' },
-                                        body: JSON.stringify(data),
-                                    });
-
-                                    if (res.ok) {
-                                        alert('Спасибо! Ваша заявка отправлена.');
-                                        form.reset();
-                                    } else {
-                                        alert('Ошибка при отправке. Попробуйте позже.');
-                                    }
-                                } catch (err) {
-                                    console.error(err);
-                                    alert('Ошибка при отправке.');
-                                }
-                            }}>
-                                <div className="grid gap-4 py-4">
-                                    <div className="grid gap-2">
-                                        <Label htmlFor="name">Ваше имя</Label>
-                                        <Input id="name" name="name" placeholder="Иван Иванов" required />
-                                    </div>
-                                    <div className="grid gap-2">
-                                        <Label htmlFor="email">Email</Label>
-                                        <Input id="email" name="email" type="email" placeholder="example@mail.com" required />
-                                    </div>
-                                    <div className="grid gap-2">
-                                        <Label htmlFor="phone">Телефон / WhatsApp</Label>
-                                        <Input id="phone" name="phone" placeholder="+7 999 000 00 00" />
-                                    </div>
-                                    <div className="grid gap-2">
-                                        <Label htmlFor="message">Комментарий</Label>
-                                        <Textarea id="message" name="message" placeholder="Хочу узнать подробности..." />
-                                    </div>
-                                </div>
-                                <Button type="submit" className="w-full bg-retreat-brown hover:bg-retreat-brown-dark text-white">Отправить заявку</Button>
-                            </form>
-                        </DialogContent>
-                    </Dialog>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <Button
+                            size="lg"
+                            className="bg-green-500/80 hover:bg-green-600 text-white px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all hover:scale-105 shadow-lg border border-white/20"
+                            asChild
+                        >
+                            <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                                <MessageCircle className="w-6 h-6" />
+                                WhatsApp
+                            </a>
+                        </Button>
+                        <Button
+                            size="lg"
+                            className="bg-blue-500/80 hover:bg-blue-600 text-white px-8 py-6 text-lg rounded-full backdrop-blur-sm transition-all hover:scale-105 shadow-lg border border-white/20"
+                            asChild
+                        >
+                            <a href={siteConfig.contacts.telegram.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                                <Send className="w-6 h-6" />
+                                Telegram
+                            </a>
+                        </Button>
+                    </div>
                 </FadeIn>
             </div>
         </section>
