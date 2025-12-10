@@ -75,21 +75,21 @@ export function Hero() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                         <Button
                             size="lg"
-                            className="bg-white/10 hover:bg-white/20 text-white px-10 py-7 text-lg rounded-full backdrop-blur-md transition-all duration-300 hover:scale-105 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20 hover:border-white/40 group bg-clip-padding"
+                            className="bg-white/10 hover:bg-green-500/20 text-white px-10 py-7 text-lg rounded-full backdrop-blur-md transition-all duration-300 hover:scale-105 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20 hover:border-green-500/50 group bg-clip-padding"
                             asChild
                         >
                             <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                                <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                                <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-300 group-hover:text-green-400" />
                                 <span className="font-light tracking-wide">WhatsApp</span>
                             </a>
                         </Button>
                         <Button
                             size="lg"
-                            className="bg-white/10 hover:bg-white/20 text-white px-10 py-7 text-lg rounded-full backdrop-blur-md transition-all duration-300 hover:scale-105 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20 hover:border-white/40 group bg-clip-padding"
+                            className="bg-white/10 hover:bg-[#87CEEB]/20 text-white px-10 py-7 text-lg rounded-full backdrop-blur-md transition-all duration-300 hover:scale-105 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] border border-white/20 hover:border-[#87CEEB]/50 group bg-clip-padding"
                             asChild
                         >
                             <a href={siteConfig.contacts.telegram.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3">
-                                <Send className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+                                <Send className="w-5 h-5 group-hover:scale-110 transition-transform duration-300 group-hover:text-[#87CEEB]" />
                                 <span className="font-light tracking-wide">Telegram</span>
                             </a>
                         </Button>
