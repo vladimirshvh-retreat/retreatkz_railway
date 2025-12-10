@@ -17,6 +17,7 @@ const navItems = [
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = React.useState(false);
+    const [isHovered, setIsHovered] = React.useState(false);
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -26,18 +27,23 @@ export function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Helper to determine if we should show the "active" (white bg) state
+    const isActive = isScrolled || isHovered;
+
     return (
         <header
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4",
-                isScrolled ? "bg-white shadow-sm" : "bg-transparent"
+                isActive ? "bg-white shadow-sm" : "bg-transparent"
             )}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
         >
             <div className="container mx-auto px-4 flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-3">
                     {/* Logo - adapts to scroll state */}
                     <div
-                        className={cn("h-10 w-10 transition-colors duration-300", isScrolled ? "bg-[#87CEEB]" : "bg-white")}
+                        className={cn("h-10 w-10 transition-colors duration-300", isActive ? "bg-[#87CEEB]" : "bg-white")}
                         style={{
                             maskImage: 'url("/images/logo.png")',
                             maskSize: 'contain',
@@ -50,7 +56,7 @@ export function Navbar() {
                         }}
                     />
                     <span className={cn("text-3xl font-bold font-serif tracking-wide transition-colors duration-300",
-                        isScrolled ? "text-slate-900" : "text-white"
+                        isActive ? "text-slate-900" : "text-white"
                     )}>
                         Oryn Retreat
                     </span>
@@ -64,7 +70,7 @@ export function Navbar() {
                             href={item.href}
                             className={cn(
                                 "text-sm font-medium transition-colors flex items-center hover:opacity-80",
-                                isScrolled ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
+                                isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
                             )}
                         >
                             {item.name === "Home" ? <Home className="w-5 h-5" /> : item.name}
@@ -72,7 +78,7 @@ export function Navbar() {
                     ))}
                     <Button className={cn(
                         "font-semibold rounded-md px-6 transition-colors",
-                        isScrolled
+                        isActive
                             ? "bg-[#87CEEB] hover:bg-[#5FB6D9] text-white"
                             : "bg-white text-slate-900 hover:bg-white/90"
                     )}>
@@ -83,7 +89,7 @@ export function Navbar() {
                 {/* Mobile Nav */}
                 <Sheet>
                     <SheetTrigger asChild>
-                        <Button variant="ghost" size="icon" className={cn("xl:hidden", isScrolled ? "text-slate-900" : "text-white")}>
+                        <Button variant="ghost" size="icon" className={cn("xl:hidden", isActive ? "text-slate-900" : "text-white")}>
                             <Menu className="h-6 w-6" />
                             <span className="sr-only">Toggle menu</span>
                         </Button>
