@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -55,11 +56,17 @@ export function Navbar() {
                             WebkitMaskPosition: 'center'
                         }}
                     />
-                    <span className={cn("text-3xl font-bold font-serif tracking-wide transition-colors duration-300",
-                        isActive ? "text-slate-900" : "text-white"
-                    )}>
-                        Oryn Retreat
-                    </span>
+                    <div className="relative h-8 w-48">
+                        <Image
+                            src="/images/brand-text.png"
+                            alt="МЕСТОРОЖДЕНИЯ"
+                            fill
+                            className={cn(
+                                "object-contain transition-all duration-300",
+                                isActive ? "" : "brightness-0 invert"
+                            )}
+                        />
+                    </div>
                 </Link>
 
                 {/* Desktop Nav */}

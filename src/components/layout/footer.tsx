@@ -11,7 +11,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
                     {/* Brand & About */}
                     <div className="space-y-4">
-                        <h3 className="text-2xl font-bold font-tenor tracking-wide">Oryn Retreat</h3>
+                        <h3 className="text-2xl font-bold font-tenor tracking-wide">МЕСТОРОЖДЕНИЯ</h3>
                         <p className="text-slate-400 text-sm leading-relaxed whitespace-pre-line">
                             Этот ретрит — больше, чем программа.
                             Это встреча с собой настоящим: лёгким, свободным, живым.
@@ -54,7 +54,7 @@ export function Footer() {
                 <Separator className="bg-slate-800 mb-8" />
 
                 <div className="flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
-                    <p>&copy; 2025 Oryn retreat. All rights reserved.</p>
+                    <p>&copy; 2025 МЕСТОРОЖДЕНИЯ. All rights reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <span className="cursor-default">Privacy Policy</span>
                         <span className="cursor-default">Terms of Service</span>

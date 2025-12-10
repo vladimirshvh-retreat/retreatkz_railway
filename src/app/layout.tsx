@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Oryn Retreat",
+  title: "МЕСТОРОЖДЕНИЯ - Ретрит на Бали",
   description: "Этот ретрит — больше, чем программа. Это встреча с собой настоящим.",
   icons: {
     icon: "/images/logo.png",
