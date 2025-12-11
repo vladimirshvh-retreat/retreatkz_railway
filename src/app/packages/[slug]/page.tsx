@@ -33,7 +33,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
 
                 <article className="max-w-4xl mx-auto">
                     <FadeIn direction="up">
-                        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-900 font-tenor text-center">
+                        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-900 font-sans text-center">
                             {data.title}
                         </h1>
                     </FadeIn>
@@ -68,7 +68,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                     {/* Gallery */}
                     {data.images.length > 1 && (
                         <div className="space-y-8">
-                            <h3 className="text-2xl font-bold text-slate-900 font-tenor">Галерея</h3>
+                            <h3 className="text-2xl font-bold text-slate-900 font-sans">Галерея</h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {data.images.slice(1).map((img, index) => (
                                     <FadeIn key={index} delay={0.1 * index} direction="up">
@@ -86,20 +86,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                         </div>
                     )}
 
-                    {/* Video Placeholder */}
-                    <div className="mt-16">
-                        <h3 className="text-2xl font-bold text-slate-900 font-tenor mb-6">Видео</h3>
-                        <div className="relative w-full aspect-video bg-slate-100 rounded-2xl flex items-center justify-center overflow-hidden shadow-inner">
-                            <p className="text-slate-400">Видео будет добавлено позже</p>
-                            {/* 
-                <iframe 
-                    src="YOUR_VIDEO_URL" 
-                    className="absolute top-0 left-0 w-full h-full" 
-                    allowFullScreen 
-                /> 
-                */}
-                        </div>
-                    </div>
+
 
                     <div className="mt-16 text-center space-y-8">
                         <Link href="/#booking">
@@ -109,7 +96,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                         </Link>
 
                         <div className="pt-8 border-t border-slate-100">
-                            <h3 className="text-xl font-tenor mb-6 text-slate-900">Обратная связь</h3>
+                            <h3 className="text-xl font-sans mb-6 text-slate-900">Обратная связь</h3>
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
                                 <Button variant="outline" size="lg" className="gap-2 hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-colors" asChild>
                                     <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer">
