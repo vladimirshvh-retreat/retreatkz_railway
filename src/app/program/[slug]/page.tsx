@@ -28,7 +28,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
                 <Link href="/#vibe">
                     <Button variant="ghost" className="mb-8 hover:bg-slate-100">
                         <ArrowLeft className="mr-2 h-4 w-4" />
-                        Назад к программе
+                        Назад
                     </Button>
                 </Link>
 

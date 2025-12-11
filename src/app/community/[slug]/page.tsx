@@ -29,7 +29,7 @@ export default async function CommunityPage({ params }: { params: Promise<{ slug
                 <Link href="/#community">
                     <Button variant="ghost" className="mb-8 hover:bg-slate-100">
                         <ArrowLeft className="mr-2 h-4 w-4" />
-                        Назад к сообществу
+                        Назад
                     </Button>
                 </Link>
 

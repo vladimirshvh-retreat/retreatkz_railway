@@ -28,7 +28,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                 <Link href="/#packages">
                     <Button variant="ghost" className="mb-8 hover:bg-slate-100">
                         <ArrowLeft className="mr-2 h-4 w-4" />
-                        Назад к пакетам
+                        Назад
                     </Button>
                 </Link>
 
