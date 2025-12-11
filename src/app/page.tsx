@@ -5,7 +5,6 @@ import { Packages } from "@/components/sections/packages";
 import { Community } from "@/components/sections/community";
 import { Vibe } from "@/components/sections/vibe";
 import { TransformationalJourney } from "@/components/sections/transformational-journey";
-import { VideoSection } from "@/components/sections/video-section";
 import { ClientExperiences } from "@/components/sections/client-experiences";
 import { ProgramCTA } from "@/components/sections/program-cta";
 
@@ -16,7 +15,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TransformationalJourney />
-      <VideoSection />
       <Packages />
       <Community />
       <Vibe />
