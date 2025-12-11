@@ -88,12 +88,20 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
 
 
 
+                    import {ContactModal} from "@/components/shared/contact-modal";
+                    // ... imports
+
+                    // ... Inside component
+
                     <div className="mt-16 text-center space-y-8">
-                        <Link href="/#booking">
-                            <Button size="lg" className="bg-sky-400 hover:bg-sky-500 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                        <ContactModal
+                            title="Бронирование"
+                            message="Для бронирования места свяжитесь с оператором"
+                        >
+                            <Button size="lg" className="bg-[#87CEEB] hover:bg-[#5FB6D9] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
                                 Забронировать
                             </Button>
-                        </Link>
+                        </ContactModal>
 
                         <div className="pt-8 border-t border-slate-100">
                             <h3 className="text-xl font-sans mb-6 text-slate-900">Обратная связь</h3>

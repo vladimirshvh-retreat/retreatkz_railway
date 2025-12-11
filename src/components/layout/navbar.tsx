@@ -7,6 +7,7 @@ import { Menu, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { ContactModal } from "@/components/shared/contact-modal";
 
 const navItems = [
     { name: "Home", href: "/", icon: Home },
@@ -15,10 +16,6 @@ const navItems = [
     { name: "Программа", href: "#vibe" },
     { name: "Контакты", href: "#contact" },
 ];
-
-import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { siteConfig } from "@/lib/config";
-import { MessageCircle, Send } from "lucide-react";
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = React.useState(false);
@@ -34,31 +31,6 @@ export function Navbar() {
 
     // Helper to determine if we should show the "active" (white bg) state
     const isActive = isScrolled || isHovered;
-
-    const renderContactButtons = () => (
-        <div className="flex flex-col gap-3 mt-4">
-            <Button
-                size="lg"
-                className="bg-white/10 hover:bg-green-500/20 text-slate-900 border border-slate-200 hover:border-green-500/50 w-full justify-start gap-3 backdrop-blur-md shadow-sm transition-all duration-300 group"
-                asChild
-            >
-                <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-5 h-5 text-green-600 group-hover:scale-110 transition-transform" />
-                    <span className="font-light">WhatsApp</span>
-                </a>
-            </Button>
-            <Button
-                size="lg"
-                className="bg-white/10 hover:bg-[#87CEEB]/20 text-slate-900 border border-slate-200 hover:border-[#87CEEB]/50 w-full justify-start gap-3 backdrop-blur-md shadow-sm transition-all duration-300 group"
-                asChild
-            >
-                <a href={siteConfig.contacts.telegram.link} target="_blank" rel="noopener noreferrer">
-                    <Send className="w-5 h-5 text-[#87CEEB] group-hover:scale-110 transition-transform" />
-                    <span className="font-light">Telegram</span>
-                </a>
-            </Button>
-        </div>
-    );
 
     return (
         <header
@@ -102,29 +74,20 @@ export function Navbar() {
                 <nav className="hidden xl:flex items-center gap-6">
                     {navItems.map((item) => (
                         item.name === "Тарифы" ? (
-                            <Dialog key={item.name}>
-                                <DialogTrigger asChild>
-                                    <button
-                                        className={cn(
-                                            "text-sm font-medium transition-colors flex items-center hover:opacity-80 cursor-pointer",
-                                            isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
-                                        )}
-                                    >
-                                        {item.name}
-                                    </button>
-                                </DialogTrigger>
-                                <DialogContent className="sm:max-w-md bg-white">
-                                    <DialogHeader>
-                                        <DialogTitle className="text-center font-sans text-2xl mb-2">Тарифы</DialogTitle>
-                                    </DialogHeader>
-                                    <div className="text-center space-y-6 py-4">
-                                        <p className="text-slate-600 font-light text-lg">
-                                            Для получения информации по тарифам свяжитесь с оператором
-                                        </p>
-                                        {renderContactButtons()}
-                                    </div>
-                                </DialogContent>
-                            </Dialog>
+                            <ContactModal
+                                key={item.name}
+                                title="Тарифы"
+                                message="Для получения информации по тарифам свяжитесь с оператором"
+                            >
+                                <button
+                                    className={cn(
+                                        "text-sm font-medium transition-colors flex items-center hover:opacity-80 cursor-pointer",
+                                        isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
+                                    )}
+                                >
+                                    {item.name}
+                                </button>
+                            </ContactModal>
                         ) : (
                             <Link
                                 key={item.name}
@@ -138,14 +101,19 @@ export function Navbar() {
                             </Link>
                         )
                     ))}
-                    <Button className={cn(
-                        "font-semibold rounded-md px-6 transition-colors",
-                        isActive
-                            ? "bg-[#87CEEB] hover:bg-[#5FB6D9] text-white"
-                            : "bg-white text-slate-900 hover:bg-white/90"
-                    )}>
-                        Забронировать
-                    </Button>
+                    <ContactModal
+                        title="Бронирование"
+                        message="Для бронирования места свяжитесь с оператором"
+                    >
+                        <Button className={cn(
+                            "font-semibold rounded-md px-6 transition-colors",
+                            isActive
+                                ? "bg-[#87CEEB] hover:bg-[#5FB6D9] text-white"
+                                : "bg-white text-slate-900 hover:bg-white/90"
+                        )}>
+                            Забронировать
+                        </Button>
+                    </ContactModal>
                 </nav>
 
                 {/* Mobile Nav */}
@@ -160,26 +128,17 @@ export function Navbar() {
                         <div className="flex flex-col gap-4 mt-8">
                             {navItems.map((item) => (
                                 item.name === "Тарифы" ? (
-                                    <Dialog key={item.name}>
-                                        <DialogTrigger asChild>
-                                            <button
-                                                className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
-                                            >
-                                                {item.name}
-                                            </button>
-                                        </DialogTrigger>
-                                        <DialogContent className="sm:max-w-md bg-white">
-                                            <DialogHeader>
-                                                <DialogTitle className="text-center font-sans text-2xl mb-2">Тарифы</DialogTitle>
-                                            </DialogHeader>
-                                            <div className="text-center space-y-6 py-4">
-                                                <p className="text-slate-600 font-light text-lg">
-                                                    Для получения информации по тарифам свяжитесь с оператором
-                                                </p>
-                                                {renderContactButtons()}
-                                            </div>
-                                        </DialogContent>
-                                    </Dialog>
+                                    <ContactModal
+                                        key={item.name}
+                                        title="Тарифы"
+                                        message="Для получения информации по тарифам свяжитесь с оператором"
+                                    >
+                                        <button
+                                            className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                                        >
+                                            {item.name}
+                                        </button>
+                                    </ContactModal>
                                 ) : (
                                     <Link
                                         key={item.name}
@@ -191,7 +150,12 @@ export function Navbar() {
                                     </Link>
                                 )
                             ))}
-                            <Button className="w-full mt-4 bg-[#87CEEB] hover:bg-[#5FB6D9] text-white">Забронировать</Button>
+                            <ContactModal
+                                title="Бронирование"
+                                message="Для бронирования места свяжитесь с оператором"
+                            >
+                                <Button className="w-full mt-4 bg-[#87CEEB] hover:bg-[#5FB6D9] text-white">Забронировать</Button>
+                            </ContactModal>
                         </div>
                     </SheetContent>
                 </Sheet>
