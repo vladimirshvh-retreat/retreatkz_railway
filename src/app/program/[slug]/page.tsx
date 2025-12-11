@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, MessageCircle, Send } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { siteConfig } from "@/lib/config";
+import { ContactModal } from "@/components/shared/contact-modal";
 
 export async function generateStaticParams() {
     return programData.map((item) => ({
@@ -39,7 +40,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
                                     {data.subtitle}
                                 </span>
                             )}
-                            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 font-tenor">
+                            <h1 className="text-4xl md:text-6xl font-bold text-slate-900 font-sans">
                                 {data.title}
                             </h1>
                         </div>
@@ -65,14 +66,17 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
                     </FadeIn>
 
                     <div className="mt-16 text-center space-y-8">
-                        <Link href="/#booking">
-                            <Button size="lg" className="bg-sky-400 hover:bg-sky-500 text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                        <ContactModal
+                            title="Бронирование"
+                            message="Для бронирования места свяжитесь с оператором"
+                        >
+                            <Button size="lg" className="bg-[#87CEEB] hover:bg-[#5FB6D9] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
                                 Забронировать
                             </Button>
-                        </Link>
+                        </ContactModal>
 
                         <div className="pt-8 border-t border-slate-100">
-                            <h3 className="text-xl font-tenor mb-6 text-slate-900">Обратная связь</h3>
+                            <h3 className="text-xl font-sans mb-6 text-slate-900">Обратная связь</h3>
                             <div className="flex flex-col sm:flex-row justify-center gap-4">
                                 <Button variant="outline" size="lg" className="gap-2 hover:bg-green-50 hover:text-green-600 hover:border-green-200 transition-colors" asChild>
                                     <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer">
