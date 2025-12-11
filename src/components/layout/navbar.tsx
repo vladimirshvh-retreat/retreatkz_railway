@@ -56,7 +56,7 @@ export function Navbar() {
                             WebkitMaskPosition: 'center'
                         }}
                     />
-                    <div className="relative h-8 w-48">
+                    <div className="relative h-12 w-64">
                         <Image
                             src="/images/brand-text.png"
                             alt="МЕСТОРОЖДЕНИЯ"
