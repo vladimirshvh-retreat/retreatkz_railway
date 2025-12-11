@@ -16,6 +16,10 @@ const navItems = [
     { name: "Контакты", href: "#contact" },
 ];
 
+import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { siteConfig } from "@/lib/config";
+import { MessageCircle, Send } from "lucide-react";
+
 export function Navbar() {
     const [isScrolled, setIsScrolled] = React.useState(false);
     const [isHovered, setIsHovered] = React.useState(false);
@@ -30,6 +34,31 @@ export function Navbar() {
 
     // Helper to determine if we should show the "active" (white bg) state
     const isActive = isScrolled || isHovered;
+
+    const renderContactButtons = () => (
+        <div className="flex flex-col gap-3 mt-4">
+            <Button
+                size="lg"
+                className="bg-white/10 hover:bg-green-500/20 text-slate-900 border border-slate-200 hover:border-green-500/50 w-full justify-start gap-3 backdrop-blur-md shadow-sm transition-all duration-300 group"
+                asChild
+            >
+                <a href={siteConfig.contacts.whatsapp.link} target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="w-5 h-5 text-green-600 group-hover:scale-110 transition-transform" />
+                    <span className="font-light">WhatsApp</span>
+                </a>
+            </Button>
+            <Button
+                size="lg"
+                className="bg-white/10 hover:bg-[#87CEEB]/20 text-slate-900 border border-slate-200 hover:border-[#87CEEB]/50 w-full justify-start gap-3 backdrop-blur-md shadow-sm transition-all duration-300 group"
+                asChild
+            >
+                <a href={siteConfig.contacts.telegram.link} target="_blank" rel="noopener noreferrer">
+                    <Send className="w-5 h-5 text-[#87CEEB] group-hover:scale-110 transition-transform" />
+                    <span className="font-light">Telegram</span>
+                </a>
+            </Button>
+        </div>
+    );
 
     return (
         <header
@@ -72,16 +101,42 @@ export function Navbar() {
                 {/* Desktop Nav */}
                 <nav className="hidden xl:flex items-center gap-6">
                     {navItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className={cn(
-                                "text-sm font-medium transition-colors flex items-center hover:opacity-80",
-                                isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
-                            )}
-                        >
-                            {item.name === "Home" ? <Home className="w-5 h-5" /> : item.name}
-                        </Link>
+                        item.name === "Тарифы" ? (
+                            <Dialog key={item.name}>
+                                <DialogTrigger asChild>
+                                    <button
+                                        className={cn(
+                                            "text-sm font-medium transition-colors flex items-center hover:opacity-80 cursor-pointer",
+                                            isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
+                                        )}
+                                    >
+                                        {item.name}
+                                    </button>
+                                </DialogTrigger>
+                                <DialogContent className="sm:max-w-md bg-white">
+                                    <DialogHeader>
+                                        <DialogTitle className="text-center font-serif text-2xl mb-2">Тарифы</DialogTitle>
+                                    </DialogHeader>
+                                    <div className="text-center space-y-6 py-4">
+                                        <p className="text-slate-600 font-light text-lg">
+                                            Для получения информации по тарифам свяжитесь с оператором
+                                        </p>
+                                        {renderContactButtons()}
+                                    </div>
+                                </DialogContent>
+                            </Dialog>
+                        ) : (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className={cn(
+                                    "text-sm font-medium transition-colors flex items-center hover:opacity-80",
+                                    isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
+                                )}
+                            >
+                                {item.name === "Home" ? <Home className="w-5 h-5" /> : item.name}
+                            </Link>
+                        )
                     ))}
                     <Button className={cn(
                         "font-semibold rounded-md px-6 transition-colors",
@@ -104,14 +159,37 @@ export function Navbar() {
                     <SheetContent side="right">
                         <div className="flex flex-col gap-4 mt-8">
                             {navItems.map((item) => (
-                                <Link
-                                    key={item.name}
-                                    href={item.href}
-                                    className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2"
-                                >
-                                    {item.name === "Home" && <Home className="w-5 h-5" />}
-                                    {item.name !== "Home" && item.name}
-                                </Link>
+                                item.name === "Тарифы" ? (
+                                    <Dialog key={item.name}>
+                                        <DialogTrigger asChild>
+                                            <button
+                                                className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                                            >
+                                                {item.name}
+                                            </button>
+                                        </DialogTrigger>
+                                        <DialogContent className="sm:max-w-md bg-white">
+                                            <DialogHeader>
+                                                <DialogTitle className="text-center font-serif text-2xl mb-2">Тарифы</DialogTitle>
+                                            </DialogHeader>
+                                            <div className="text-center space-y-6 py-4">
+                                                <p className="text-slate-600 font-light text-lg">
+                                                    Для получения информации по тарифам свяжитесь с оператором
+                                                </p>
+                                                {renderContactButtons()}
+                                            </div>
+                                        </DialogContent>
+                                    </Dialog>
+                                ) : (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2"
+                                    >
+                                        {item.name === "Home" && <Home className="w-5 h-5" />}
+                                        {item.name !== "Home" && item.name}
+                                    </Link>
+                                )
                             ))}
                             <Button className="w-full mt-4 bg-[#87CEEB] hover:bg-[#5FB6D9] text-white">Забронировать</Button>
                         </div>
