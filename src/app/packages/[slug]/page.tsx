@@ -66,6 +66,22 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
                         />
                     </FadeIn>
 
+                    {/* Extra button request for Body & Mind */}
+                    {slug === 'body-mind' && (
+                        <FadeIn direction="up">
+                            <div className="flex justify-center mb-16">
+                                <ContactModal
+                                    title="Бронирование"
+                                    message="Для бронирования места свяжитесь с оператором"
+                                >
+                                    <Button size="lg" className="bg-[#87CEEB] hover:bg-[#5FB6D9] text-white px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                                        Забронировать
+                                    </Button>
+                                </ContactModal>
+                            </div>
+                        </FadeIn>
+                    )}
+
                     {/* Gallery */}
                     {data.images.length > 1 && (
                         <div className="space-y-8">
