@@ -81,8 +81,8 @@ export function Navbar() {
                             >
                                 <button
                                     className={cn(
-                                        "text-sm font-medium transition-colors flex items-center hover:opacity-80 cursor-pointer",
-                                        isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
+                                        "text-sm font-medium transition-all duration-300 flex items-center cursor-pointer hover:text-[#87CEEB] hover:drop-shadow-[0_0_8px_rgba(135,206,235,0.8)]",
+                                        isActive ? "text-slate-600" : "text-white/90"
                                     )}
                                 >
                                     {item.name}
@@ -93,8 +93,8 @@ export function Navbar() {
                                 key={item.name}
                                 href={item.href}
                                 className={cn(
-                                    "text-sm font-medium transition-colors flex items-center hover:opacity-80",
-                                    isActive ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"
+                                    "text-sm font-medium transition-all duration-300 flex items-center hover:text-[#87CEEB] hover:drop-shadow-[0_0_8px_rgba(135,206,235,0.8)]",
+                                    isActive ? "text-slate-600" : "text-white/90"
                                 )}
                             >
                                 {item.name === "Home" ? <Home className="w-5 h-5" /> : item.name}
@@ -134,7 +134,7 @@ export function Navbar() {
                                         message="Для получения информации по тарифам свяжитесь с оператором"
                                     >
                                         <button
-                                            className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2 text-left w-full"
+                                            className="text-lg font-medium text-slate-900 hover:text-[#87CEEB] transition-all flex items-center gap-2 text-left w-full hover:drop-shadow-[0_0_5px_rgba(135,206,235,0.5)]"
                                         >
                                             {item.name}
                                         </button>
@@ -143,7 +143,7 @@ export function Navbar() {
                                     <Link
                                         key={item.name}
                                         href={item.href}
-                                        className="text-lg font-medium text-slate-900 hover:text-primary transition-colors flex items-center gap-2"
+                                        className="text-lg font-medium text-slate-900 hover:text-[#87CEEB] transition-all flex items-center gap-2 hover:drop-shadow-[0_0_5px_rgba(135,206,235,0.5)]"
                                     >
                                         {item.name === "Home" && <Home className="w-5 h-5" />}
                                         {item.name !== "Home" && item.name}
