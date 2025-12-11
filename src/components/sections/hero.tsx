@@ -60,7 +60,7 @@ export function Hero() {
             {/* Content */}
             <div className="relative z-20 container mx-auto px-4 text-center text-white max-w-4xl">
                 <FadeIn delay={0.2} direction="up">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 tracking-tight drop-shadow-md font-serif leading-tight">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold mb-6 tracking-tight drop-shadow-md font-sans leading-tight">
                         5 дней тишины и обновления
                     </h1>
                 </FadeIn>

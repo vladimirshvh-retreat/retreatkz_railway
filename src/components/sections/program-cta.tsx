@@ -12,7 +12,7 @@ export function ProgramCTA() {
         <section className="py-24 bg-retreat-bg text-center">
             <div className="container mx-auto px-4 max-w-4xl">
                 <FadeIn direction="up">
-                    <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-8 font-serif">
+                    <h2 className="text-3xl md:text-4xl font-semibold text-slate-900 mb-8 font-sans">
                         Готовы начать свое путешествие?
                     </h2>
                 </FadeIn>
@@ -26,7 +26,7 @@ export function ProgramCTA() {
                         </DialogTrigger>
                         <DialogContent className="sm:max-w-[425px] bg-white text-slate-900">
                             <DialogHeader>
-                                <DialogTitle className="text-2xl font-serif text-center">Заявка на ретрит</DialogTitle>
+                                <DialogTitle className="text-2xl font-sans text-center">Заявка на ретрит</DialogTitle>
                             </DialogHeader>
                             <form onSubmit={async (e) => {
                                 e.preventDefault();

@@ -8,7 +8,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-serif);
+  --font-mono: var(--font-geist-mono);
   --color-retreat-brown: var(--retreat-brown);
   --color-retreat-brown-dark: var(--retreat-brown-dark);
   --color-retreat-bg: var(--retreat-bg);

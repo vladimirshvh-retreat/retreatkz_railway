@@ -19,7 +19,7 @@ export function TransformationalJourney() {
                     {/* Text Content */}
                     <div className="order-2 lg:order-1">
                         <FadeIn direction="up">
-                            <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 mb-8 font-serif">
+                            <h2 className="text-3xl md:text-5xl font-semibold text-slate-900 mb-8 font-sans">
                                 Трансформационное путешествие
                             </h2>
                         </FadeIn>

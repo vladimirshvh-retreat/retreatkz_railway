@@ -115,7 +115,7 @@ export function Navbar() {
                                 </DialogTrigger>
                                 <DialogContent className="sm:max-w-md bg-white">
                                     <DialogHeader>
-                                        <DialogTitle className="text-center font-serif text-2xl mb-2">Тарифы</DialogTitle>
+                                        <DialogTitle className="text-center font-sans text-2xl mb-2">Тарифы</DialogTitle>
                                     </DialogHeader>
                                     <div className="text-center space-y-6 py-4">
                                         <p className="text-slate-600 font-light text-lg">
@@ -170,7 +170,7 @@ export function Navbar() {
                                         </DialogTrigger>
                                         <DialogContent className="sm:max-w-md bg-white">
                                             <DialogHeader>
-                                                <DialogTitle className="text-center font-serif text-2xl mb-2">Тарифы</DialogTitle>
+                                                <DialogTitle className="text-center font-sans text-2xl mb-2">Тарифы</DialogTitle>
                                             </DialogHeader>
                                             <div className="text-center space-y-6 py-4">
                                                 <p className="text-slate-600 font-light text-lg">
