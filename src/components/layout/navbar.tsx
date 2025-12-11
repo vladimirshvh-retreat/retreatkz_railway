@@ -41,7 +41,7 @@ export function Navbar() {
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className="container mx-auto px-4 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-3">
+                <Link href="/" className="flex items-center gap-1.5">
                     {/* Logo - adapts to scroll state */}
                     <div
                         className={cn("h-10 w-10 transition-colors duration-300", isActive ? "bg-[#87CEEB]" : "bg-white")}
@@ -56,7 +56,7 @@ export function Navbar() {
                             WebkitMaskPosition: 'center'
                         }}
                     />
-                    <div className="relative h-12 w-64">
+                    <div className="relative h-10 w-56">
                         <Image
                             src="/images/brand-text.png"
                             alt="МЕСТОРОЖДЕНИЯ"
