@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, MessageCircle, Send } from "lucide-react";
 import { FadeIn } from "@/components/ui/fade-in";
 import { siteConfig } from "@/lib/config";
+import { ContactModal } from "@/components/shared/contact-modal";
 
 export async function generateStaticParams() {
     return packagesData.map((pkg) => ({
@@ -88,10 +89,7 @@ export default async function PackagePage({ params }: { params: Promise<{ slug: 
 
 
 
-                    import {ContactModal} from "@/components/shared/contact-modal";
-                    // ... imports
 
-                    // ... Inside component
 
                     <div className="mt-16 text-center space-y-8">
                         <ContactModal
