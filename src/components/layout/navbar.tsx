@@ -45,7 +45,7 @@ export function Navbar() {
                 <Link href="/" className="flex items-center gap-1.5">
                     {/* Logo - adapts to scroll state */}
                     <div
-                        className={cn("h-10 w-10 transition-colors duration-300", isActive ? "bg-[#87CEEB]" : "bg-white")}
+                        className={cn("h-12 w-12 transition-colors duration-300", isActive ? "bg-[#87CEEB]" : "bg-white")}
                         style={{
                             maskImage: 'url("/images/logo.png")',
                             maskSize: 'contain',
@@ -57,7 +57,7 @@ export function Navbar() {
                             WebkitMaskPosition: 'center'
                         }}
                     />
-                    <div className="relative h-10 w-56">
+                    <div className="relative h-12 w-72">
                         <Image
                             src="/images/brand-text.png"
                             alt="МЕСТОРОЖДЕНИЯ"
@@ -106,7 +106,7 @@ export function Navbar() {
                         message="Для бронирования места свяжитесь с оператором"
                     >
                         <Button className={cn(
-                            "font-semibold rounded-md px-6 transition-colors",
+                            "font-semibold rounded-md px-6 transition-colors shadow-lg hover:shadow-xl",
                             isActive
                                 ? "bg-[#87CEEB] hover:bg-[#5FB6D9] text-white"
                                 : "bg-white text-slate-900 hover:bg-white/90"

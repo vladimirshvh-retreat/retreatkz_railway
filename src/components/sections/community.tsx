@@ -29,7 +29,7 @@ export function Community() {
                             className="text-center h-full"
                         >
                             <Link href={`/community/${item.slug}`} className="block h-full group cursor-pointer">
-                                <div className="relative h-64 w-full mb-6 rounded-2xl overflow-hidden shadow-md">
+                                <div className="relative h-64 w-full mb-6 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
                                     <Image
                                         src={item.images[0]}
                                         alt={item.title}
