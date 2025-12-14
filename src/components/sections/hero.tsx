@@ -13,13 +13,16 @@ import { MessageCircle, Send } from "lucide-react";
 import { siteConfig } from "@/lib/config";
 
 const heroImages = [
-    "/images/hero/rice-terraces.png",
-    "/images/hero/ceremony.png",
-    "/images/hero/surfing.png",
-    "/images/hero/sound-healing.png",
-    "/images/hero/yoga-shala.png",
-    "/images/hero/qigong.png",
-    "/images/hero/sunset.png",
+    "/images/hero/hero-1.jpg",
+    "/images/hero/hero-2.jpg",
+    "/images/hero/hero-3.png",
+    "/images/hero/hero-4.jpg",
+    "/images/hero/hero-5.jpg",
+    "/images/hero/hero-6.jpg",
+    "/images/hero/hero-7.png",
+    "/images/hero/hero-8.png",
+    "/images/hero/hero-9.jpg",
+    "/images/hero/hero-10.jpg",
 ];
 
 export function Hero() {
