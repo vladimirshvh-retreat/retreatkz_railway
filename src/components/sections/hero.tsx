@@ -39,13 +39,13 @@ export function Hero() {
     return (
         <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center bg-black">
             {/* Background Slideshow */}
-            <AnimatePresence mode="popLayout">
+            <AnimatePresence>
                 <motion.div
                     key={currentImageIndex}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1.5 }}
+                    exit={{ opacity: 0, transition: { delay: 2.0, duration: 0.1 } }}
+                    transition={{ duration: 2.0, ease: "easeInOut" }}
                     className="absolute inset-0 z-0"
                 >
                     <Image
