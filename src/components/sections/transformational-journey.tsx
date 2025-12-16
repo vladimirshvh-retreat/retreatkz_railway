@@ -46,7 +46,7 @@ export function TransformationalJourney() {
                                     src={images[0]}
                                     alt="Journey 1"
                                     fill
-                                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                                    className="object-cover object-[25%_50%] scale-110 hover:scale-115 transition-transform duration-700"
                                 />
                             </div>
                             <div className="relative h-40 md:h-56 rounded-2xl overflow-hidden shadow-sm">
@@ -72,7 +72,7 @@ export function TransformationalJourney() {
                                     src={images[3]}
                                     alt="Journey 4"
                                     fill
-                                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
+                                    className="object-cover object-[25%_50%] scale-110 hover:scale-115 transition-transform duration-700"
                                 />
                             </div>
                         </FadeIn>
