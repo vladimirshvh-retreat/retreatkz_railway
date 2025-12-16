@@ -4,10 +4,10 @@ import { FadeIn } from "@/components/ui/fade-in";
 import Image from "next/image";
 
 const images = [
-    "/images/hero/rice-terraces.png",
-    "/images/hero/ceremony.png",
-    "/images/hero/yoga-shala.png",
-    "/images/hero/sound-healing.png"
+    "/images/journey/journey-1.png",
+    "/images/journey/journey-2.jpg",
+    "/images/journey/journey-3.png",
+    "/images/journey/journey-4.png"
 ];
 
 export function TransformationalJourney() {
