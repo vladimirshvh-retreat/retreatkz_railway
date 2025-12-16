@@ -46,7 +46,7 @@ export function TransformationalJourney() {
                                     src={images[0]}
                                     alt="Journey 1"
                                     fill
-                                    className="object-cover hover:scale-105 transition-transform duration-700"
+                                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                             <div className="relative h-40 md:h-56 rounded-2xl overflow-hidden shadow-sm">
@@ -54,7 +54,7 @@ export function TransformationalJourney() {
                                     src={images[1]}
                                     alt="Journey 2"
                                     fill
-                                    className="object-cover hover:scale-105 transition-transform duration-700"
+                                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </FadeIn>
@@ -64,7 +64,7 @@ export function TransformationalJourney() {
                                     src={images[2]}
                                     alt="Journey 3"
                                     fill
-                                    className="object-cover hover:scale-105 transition-transform duration-700"
+                                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                             <div className="relative h-48 md:h-64 rounded-2xl overflow-hidden shadow-sm">
@@ -72,7 +72,7 @@ export function TransformationalJourney() {
                                     src={images[3]}
                                     alt="Journey 4"
                                     fill
-                                    className="object-cover hover:scale-105 transition-transform duration-700"
+                                    className="object-cover object-center hover:scale-105 transition-transform duration-700"
                                 />
                             </div>
                         </FadeIn>
