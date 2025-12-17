@@ -32,7 +32,7 @@ export function Packages() {
                             className="h-full"
                         >
                             <Link href={`/packages/${pkg.slug}`} className="block h-full">
-                                <Card className="h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group border-none cursor-pointer">
+                                <Card className="h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group border-none cursor-pointer flex flex-col p-0 gap-0">
                                     <div className="relative h-64 overflow-hidden rounded-t-2xl">
                                         <Image
                                             src={pkg.images[0]}
