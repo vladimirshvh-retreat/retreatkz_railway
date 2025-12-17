@@ -46,13 +46,13 @@ export function Packages() {
                                             </Badge>
                                         )}
                                     </div>
-                                    <CardHeader>
+                                    <CardHeader className="pt-6">
                                         <CardTitle className="text-xl font-bold text-slate-900">{pkg.title}</CardTitle>
                                     </CardHeader>
-                                    <CardContent>
+                                    <CardContent className="flex-grow">
                                         <p className="text-slate-600 line-clamp-3">{pkg.description}</p>
                                     </CardContent>
-                                    <CardFooter>
+                                    <CardFooter className="pb-6">
                                         <Button variant="link" className="p-0 text-primary font-semibold hover:text-primary/80">
                                             Читать дальше →
                                         </Button>
