@@ -97,7 +97,7 @@ export const communityData: DetailPageData[] = [
     {
         slug: "paradise",
         title: "Казахстан",
-        description: "В мире, где мы каждый день живём на скорости, становится всё труднее услышать - самое важное — себя.",
+        description: "В мире, где мы каждый день живём на скорости, становится всё труднее услышать самое важное — себя. Алматы и пространство гор создают редкую возможность замедлиться, выдохнуть и вернуться к внутренней ясности и опоре.",
         content: PLACEHOLDER_CONTENT,
         images: [
             "/images/community/kazakhstan-1.jpg",
@@ -108,7 +108,7 @@ export const communityData: DetailPageData[] = [
     {
         slug: "breathing-space",
         title: "Индонезия",
-        description: "всё здесь создано для мягкого перезапуска и возвращения к жизни в присутствии",
+        description: "Всё здесь создано для мягкого перезапуска и возвращения к жизни в присутствии. Бали поддерживает это состояние естественно — через природу, тепло, ритм острова и ощущение глубокой связи с моментом.",
         content: PLACEHOLDER_CONTENT,
         images: [
             "/images/community/bali-community-1.jpg",
@@ -119,7 +119,7 @@ export const communityData: DetailPageData[] = [
     {
         slug: "comfort",
         title: "Тайланд",
-        description: "почувствовать себя и насладиться путешествием к себе.",
+        description: "Почувствовать себя и позволить путешествию стать дорогой к себе. Панган — остров, где замедление происходит само собой, а внутренний путь проживается спокойно, глубоко и осознанно.",
         content: PLACEHOLDER_CONTENT,
         images: [
             "/images/community/thailand-1.jpg",

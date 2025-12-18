@@ -11,11 +11,11 @@ export function Community() {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <FadeIn direction="up">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900 font-sans">Присоединяйтесь</h2>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900 font-sans">Приглашаем</h2>
                     </FadeIn>
                     <FadeIn direction="up" delay={0.2}>
                         <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-                            Этот ретрит — приглашение замедлиться, восстановиться и открыть внутри источник ясности и силы.
+                            Ретрит — это осознанный выбор в пользу тишины. Выбор замедлиться, восстановить баланс и открыть в себе ясность, устойчивость и силу.
                         </p>
                     </FadeIn>
                 </div>
