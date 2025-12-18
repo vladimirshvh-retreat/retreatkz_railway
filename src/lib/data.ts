@@ -53,8 +53,9 @@ export const packagesData: DetailPageData[] = [
         description: "Зелёные сады, спокойные маршруты для прогулок, тишина за столом — всё направлено на глубокое присутствие.",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1501854140884-074bf6f2a3e?q=80&w=800&auto=format&fit=crop"
+            "/images/packages/nature-1.png",
+            "/images/packages/nature-2.jpg",
+            "/images/packages/nature-3.png"
         ],
     },
     {
