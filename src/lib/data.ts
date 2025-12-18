@@ -64,18 +64,20 @@ export const packagesData: DetailPageData[] = [
         description: "Каждый день — новое погружение. Финал ретрита — древний балийский ритуал очищения водой, символ нового этапа и внутреннего обновления.",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=800&auto=format&fit=crop"
+            "/images/packages/rituals-1.jpg",
+            "/images/packages/rituals-2.png",
+            "/images/packages/rituals-3.png"
         ],
     },
     {
         slug: "bali-journey",
-        title: "Путешествие по Бали",
+        title: "Путешествие",
         description: "Красота природы, вулканы, серфинг и многое другое",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?q=80&w=800&auto=format&fit=crop"
+            "/images/packages/bali-1.jpg",
+            "/images/packages/bali-2.jpg",
+            "/images/packages/bali-3.jpg"
         ],
     },
     {
