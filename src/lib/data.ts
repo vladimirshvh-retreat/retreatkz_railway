@@ -96,32 +96,35 @@ export const packagesData: DetailPageData[] = [
 export const communityData: DetailPageData[] = [
     {
         slug: "paradise",
-        title: "Просто на маленьком кусочке рая",
+        title: "Казахстан",
         description: "В мире, где мы каждый день живём на скорости, становится всё труднее услышать - самое важное — себя.",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop"
+            "/images/community/kazakhstan-1.jpg",
+            "/images/community/kazakhstan-2.jpg",
+            "/images/community/kazakhstan-3.jpg"
         ],
     },
     {
         slug: "breathing-space",
-        title: "Тишина, дыхание, движения, пространство",
+        title: "Бали",
         description: "всё здесь создано для мягкого перезапуска и возвращения к жизни в присутствии",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop"
+            "/images/community/bali-community-1.jpg",
+            "/images/community/bali-community-2.jpg",
+            "/images/community/bali-community-3.jpg"
         ],
     },
     {
         slug: "comfort",
-        title: "в комфортных условиях",
+        title: "Тайланд",
         description: "почувствовать себя и насладиться путешествием к себе.",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800&auto=format&fit=crop"
+            "/images/community/thailand-1.jpg",
+            "/images/community/thailand-2.jpg",
+            "/images/community/thailand-3.jpg"
         ],
     },
 ];
