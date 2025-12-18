@@ -34,7 +34,7 @@ export const packagesData: DetailPageData[] = [
             "/images/packages/practices-2.png",
             "/images/packages/practices-3.png"
         ],
-        tag: "Most Popular",
+
     },
     {
         slug: "silence-detox",
@@ -42,8 +42,9 @@ export const packagesData: DetailPageData[] = [
         description: "Режим частичного молчания и детокс от телефона помогают услышать свой внутренний голос без внешней суеты.",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop"
+            "/images/packages/silence-1.jpg",
+            "/images/packages/silence-2.jpg",
+            "/images/packages/silence-3.png"
         ],
     },
     {
