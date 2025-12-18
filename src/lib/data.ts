@@ -107,7 +107,7 @@ export const communityData: DetailPageData[] = [
     },
     {
         slug: "breathing-space",
-        title: "Бали",
+        title: "Индонезия",
         description: "всё здесь создано для мягкого перезапуска и возвращения к жизни в присутствии",
         content: PLACEHOLDER_CONTENT,
         images: [
