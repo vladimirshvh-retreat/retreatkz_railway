@@ -30,9 +30,9 @@ export const packagesData: DetailPageData[] = [
         description: "Ежедневные медитации, дыхательные техники, йога, цигун, саунд-хилинг и телесные практики. Вы расслабляетесь, отпускаете напряжение, восстанавливаете энергию и чувствуете живость тела.",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1545389336-cf090694435e?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1599447421405-075710053301?q=80&w=800&auto=format&fit=crop"
+            "/images/packages/practices-1.png",
+            "/images/packages/practices-2.png",
+            "/images/packages/practices-3.png"
         ],
         tag: "Most Popular",
     },
