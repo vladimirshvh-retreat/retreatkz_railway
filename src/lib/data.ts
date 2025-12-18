@@ -82,12 +82,13 @@ export const packagesData: DetailPageData[] = [
     },
     {
         slug: "support-love",
-        title: "Поддержка и Любовь",
+        title: "Поддержка и Забота",
         description: "Приглашаем стать частью большой семьи, которая подарит любовь, понимание и заботу.",
         content: PLACEHOLDER_CONTENT,
         images: [
-            "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop"
+            "/images/packages/support-1.png",
+            "/images/packages/support-2.jpg",
+            "/images/packages/support-3.jpg"
         ],
     },
 ];
